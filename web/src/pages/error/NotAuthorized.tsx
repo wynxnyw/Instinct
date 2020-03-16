@@ -6,7 +6,7 @@ setURL('401', <NotAuthorized />);
 
 export function NotAuthorized() {
   return (
-    <div className="flex-center position-ref full-height">
+    <div id="error" className="flex-center position-ref full-height">
       <div className="code">
         401
       </div>

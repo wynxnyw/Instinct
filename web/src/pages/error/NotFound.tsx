@@ -6,7 +6,7 @@ set404(<NotFound />);
 
 export function NotFound() {
   return (
-    <div className="flex-center position-ref full-height">
+    <div id="error" className="flex-center position-ref full-height">
       <div className="code">
         404
       </div>

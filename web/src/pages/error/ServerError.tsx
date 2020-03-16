@@ -6,7 +6,7 @@ setURL('500', <ServerError />);
 
 export function ServerError() {
   return (
-    <div className="flex-center position-ref full-height">
+    <div id="error" className="flex-center position-ref full-height">
       <div className="code">
         500
       </div>
