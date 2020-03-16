@@ -1,5 +1,5 @@
 import React from 'react';
-import { GuestLayout, setURL, redirect } from 'components';
+import { GuestLayout, setURL, redirect, Modal } from 'components';
 
 setURL('login', <Login />);
 
@@ -14,7 +14,7 @@ export function Login() {
 
   return (
     <GuestLayout onRegister={onRegister} onSubmit={onLogin} onLogin={onLogin}>
-      <p>Login</p>
+      <Modal />
     </GuestLayout>
   );
 }

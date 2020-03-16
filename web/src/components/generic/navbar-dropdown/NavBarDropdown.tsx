@@ -9,8 +9,8 @@ export function NavBarDropdown({ children, text, to }: NavBarDropdownProps) {
       <Link to={to}>
         {text}
         <Icon className="ml-2" family="fas" type="caret-down" />
-        <ul className="navigation-submenu">{children}</ul>
       </Link>
+      <ul className="navigation-submenu">{children}</ul>
     </li>
   );
 }

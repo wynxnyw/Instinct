@@ -4,6 +4,7 @@ export * from './column';
 export * from './container';
 export * from './form';
 export * from './logo';
+export * from './modal';
 export * from './icon';
 export * from './jumbotron';
 export * from './navbar-child-link';
