@@ -1,3 +1,3 @@
 import './NotFound';
-import './NotAllowed';
+import './NotAuthorized';
 import './ServerError';

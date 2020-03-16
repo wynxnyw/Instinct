@@ -1,19 +1,19 @@
 import './ErrorPage.scss';
 import React from 'react';
-import { set404 } from 'components';
+import { setURL } from 'components';
 
-set404(<NotFound />);
+setURL('401', <NotAuthorized />);
 
-export function NotFound() {
+export function NotAuthorized() {
   return (
     <div className="flex-center position-ref full-height">
       <div className="code">
-        404
+        401
       </div>
 
       <div className="message" style={{ padding: 10 }}>
-        Not Found
+        Not Authorized
       </div>
     </div>
-  );
+  )
 }
