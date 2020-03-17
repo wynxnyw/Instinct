@@ -1,5 +1,5 @@
+import { useContext } from 'react';
 import { UserGuardProps } from './';
-import React, { useContext } from 'react';
 import { redirect } from '../../utility/router';
 import { SessionContext, SessionInterface } from 'app/context/session';
 

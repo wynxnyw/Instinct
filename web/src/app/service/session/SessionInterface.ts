@@ -1,4 +1,4 @@
-import { User, UserSession } from 'app/interface';
+import { User } from 'app/interface';
 
 export interface SessionInterface {
   // Fetches user bearer token if it exists

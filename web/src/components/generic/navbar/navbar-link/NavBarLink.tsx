@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBarLinkProps } from './';
+import { NavBarLinkProps } from './index';
 import { Link } from 'react-router-dom';
 
 export function NavBarLink({ children, className = '', to }: NavBarLinkProps) {

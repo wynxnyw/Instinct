@@ -25,6 +25,7 @@ export function UserProfile() {
                     <div className="header-description" />
                     <div className="profile-icon">
                       <img
+                        alt="credits"
                         src="https://playrise.me/riseweb/images/icon-credits.png"
                         style={{ position: 'relative', top: 8 }}
                       />{' '}
@@ -32,6 +33,7 @@ export function UserProfile() {
                     </div>
                     <div className="profile-icon">
                       <img
+                        alt="diamonds"
                         src="https://playrise.me/riseweb/images/icon-diamonds.png"
                         style={{ position: 'relative', top: 8 }}
                       />
@@ -39,6 +41,7 @@ export function UserProfile() {
                     </div>
                     <div className="profile-icon">
                       <img
+                        alt="flames"
                         src="https://playrise.me/riseweb/images/icon-flames.png"
                         style={{ position: 'relative', top: 5 }}
                       />
@@ -46,6 +49,7 @@ export function UserProfile() {
                     </div>
                     <div className="profile-icon">
                       <img
+                        alt="gamewins"
                         src="https://playrise.me/riseweb/images/profiles/gamewins.png"
                         style={{ position: 'relative', top: 0 }}
                       />
@@ -69,7 +73,7 @@ export function UserProfile() {
                 </div>
                 <div className="details-container">
                   <Icon type="headphones-alt" />
-                  <a href="https://youtu.be/GfxcnX7XWfg" target="_blank">
+                  <a href="https://youtu.be/GfxcnX7XWfg" target="_blank" rel="noopener noreferrer">
                     https://youtu.be/GfxcnX7XWfg
                   </a>
                 </div>

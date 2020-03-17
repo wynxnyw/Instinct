@@ -26,6 +26,7 @@ export function NewsArticle() {
               </p>
               <h5>Cupid's Garden</h5>
               <img
+                alt="cupids garden"
                 src="https://1.bp.blogspot.com/-fFHdIuAHMKE/XbJQM4aXXsI/AAAAAAABYKk/LcaSuionLiQVx_PRELWGg4LgUV40xjqCwCKgBGAsYHg/s1600/Immagine-RedBus-festa-della-donna.png"
                 style={{ float: 'right', height: 155, width: 155 }}
               />

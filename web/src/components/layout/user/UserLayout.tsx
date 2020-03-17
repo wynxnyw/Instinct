@@ -1,7 +1,7 @@
 import { UserLayoutProps } from './';
 import React, { useContext } from 'react';
-import { Header, NavBar, redirect } from 'components';
 import { SessionContext, SessionInterface } from 'app/context';
+import { Header, NavBar, redirect, UserGuard } from 'components';
 
 export function UserLayout({ children, section = 'home', style }: UserLayoutProps) {
   const sessionContext: SessionInterface = useContext(SessionContext);
@@ -11,7 +11,7 @@ export function UserLayout({ children, section = 'home', style }: UserLayoutProp
   }
 
   return (
-    <>
+    <UserGuard>
       <Header />
       <NavBar />
       <main>
@@ -19,6 +19,6 @@ export function UserLayout({ children, section = 'home', style }: UserLayoutProp
           {children}
         </section>
       </main>
-    </>
+    </UserGuard>
   );
 }
