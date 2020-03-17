@@ -6,10 +6,14 @@ export function Card(props: CardProps) {
   const { bg, color, className = '', children, header, icon } = props;
   return (
     <article className={`default-section ${className}`}>
-      <div className="aside-title">
-        {icon && <Icon type={icon} />}
-        <h3>{header}</h3>
-      </div>
+      {
+        header && (
+          <div className="aside-title">
+            {icon && <Icon type={icon} />}
+            <h3>{header}</h3>
+          </div>
+        )
+      }
       <div className="aside-content">{children}</div>
     </article>
   );

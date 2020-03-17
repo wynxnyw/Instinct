@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 export function ArticleCard() {
   return (
-    <div id="article-362" className="article-container">
+    <div className="article-container">
       <Link
         className="article-content pixelated"
-        to="/articles/1"
+        to="/community/news/1"
         style={{ backgroundImage: 'url(/img/news/swan_lake.png)' }}
       >
         <div className="article-header">

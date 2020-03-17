@@ -1,9 +1,9 @@
 import React from 'react';
 import { JumbotronProps } from './';
 
-export function Jumbotron({ children, title }: JumbotronProps) {
+export function Jumbotron({ className = '', children, style, title }: JumbotronProps) {
   return (
-    <header className="page-header flex-container flex-vertical-center">
+    <header className={`page-header flex-container flex-vertical-center ${className}`} style={style}>
       <div className="page-header-content">
         <h1>{title}</h1>
         {children}
