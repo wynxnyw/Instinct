@@ -1,9 +1,9 @@
 import React from 'react';
 import { FormProps } from './';
 
-export function Form({ children, onSubmit }: FormProps) {
+export function Form({ children, className, onSubmit }: FormProps) {
   return (
-    <form className="form-control" onSubmit={onSubmit}>
+    <form className={ className || 'form-control' } onSubmit={onSubmit}>
       {children}
     </form>
   );

@@ -17,6 +17,8 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
 
     if (user) {
       this.initSession(user);
+    } else {
+      this.logout();
     }
   }
 

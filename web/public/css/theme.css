@@ -692,12 +692,12 @@ input:-webkit-autofill{
 }
 
 .login-popup:before{
-    background-image: url(../images/login-background.png);
+    background-image: url(../img/modal.png);
     left: -100px;
 }
 
 .login-popup:after{
-    background-image: url(../images/login-logo.png);
+    background-image: url(../img/logo/regular.png);
     background-color: rgba(25, 146, 209, 0.8);
     background-position: 40px center;
     background-repeat: no-repeat;
@@ -734,6 +734,7 @@ input:-webkit-autofill{
 .login-popup .login-form .password-input i:before{
     font-size: 18px;
 }
+
 
 .login-popup .login-form .code-input span.google-authenticator{
     background-image: url(../images/web/login-google-authenticator.png);
@@ -1423,7 +1424,6 @@ input:-webkit-autofill{
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
     text-align: center;
-    overflow: hidden;
 }
 
 .header-container:before{
