@@ -1,6 +1,7 @@
 import './Header.scss';
 import React from 'react';
 import { HeaderProps } from './';
+import { Button } from 'components';
 
 export function Header({ children }: HeaderProps) {
   return (
@@ -8,13 +9,13 @@ export function Header({ children }: HeaderProps) {
       <div className="header-content">
         <div className="account-container">
           <div id="account-buttons" className="account-buttons">
-            <button className="rounded-button white plain">
-              Register
-            </button>
+            <Button>
+              Login
+            </Button>
           </div>
         </div>
       </div>
-      {children}
+      { children }
     </header>
   );
 }
