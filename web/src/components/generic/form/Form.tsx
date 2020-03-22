@@ -3,7 +3,7 @@ import { FormProps } from './';
 
 export function Form({ children, className, onSubmit }: FormProps) {
   return (
-    <form className={ className || 'form-control' } onSubmit={onSubmit}>
+    <form className={className || 'form-control'} onSubmit={onSubmit}>
       {children}
     </form>
   );

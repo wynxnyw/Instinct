@@ -6,7 +6,7 @@ setURL('login', <Login />);
 export function Login() {
   return (
     <GuestLayout>
-      <ArticleList/>
+      <ArticleList />
     </GuestLayout>
   );
 }
