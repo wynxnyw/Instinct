@@ -1,7 +1,7 @@
 import React from 'react';
 import './ModalOverlay.scss';
+import { Modal } from 'reactstrap';
 import { ModalOverlayProps } from './';
-import { Modal, ModalBody } from 'reactstrap';
 
 export function ModalOverlay({ children, header }: ModalOverlayProps) {
   return (
