@@ -1,0 +1,27 @@
+.header {
+  background-image: url('/img/bg/header.png');
+  background-position: right;
+  background-color: #9ADBEC;
+  height: 180px;
+  padding: 35px 0 0 0px;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.header .container {
+  color:#333;
+  width: 100%;
+}
+
+.header .container .overlay {
+  background-image:url(https://www.habbo.com/habbo-imaging/avatarimage?figure=hd-3091-1.hr-105-61-40.ch-3110-78.lg-3058-64.sh-3016-64&amp;direction=4&amp;head_direction=3&amp;action=wav&amp;size=l&amp;gesture=sml);
+  height: 181px;
+  background-repeat: no-repeat;
+  width: 130px;
+  float: right;
+  margin-top: -37px;
+}
+
+.header .container .display-4 {
+  font-weight: 700;
+}
