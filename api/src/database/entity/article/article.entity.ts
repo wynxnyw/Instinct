@@ -1,5 +1,5 @@
 import * as Moment from 'moment';
-import { UserEntity, userWire } from '../user';
+import { UserEntity, userWire } from '../';
 import {
   Column,
   CreateDateColumn,

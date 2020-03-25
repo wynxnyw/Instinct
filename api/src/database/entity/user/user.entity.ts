@@ -1,5 +1,5 @@
+import { ArticleEntity } from '../';
 import { User } from '../../../interface/user';
-import { ArticleEntity } from '../article/article.entity';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 export function userWire(userEntity: UserEntity): User {
@@ -16,6 +16,9 @@ export class UserEntity {
 
   @Column()
   username!: string;
+
+  @Column()
+  password!: string;
 
   @OneToMany(
     () => ArticleEntity,

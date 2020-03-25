@@ -1,11 +1,13 @@
+import { ArticlePipe } from './article.pipe';
 import { NewArticleDTO } from './article.dto';
 import { ArticleService } from './article.service';
 import { Article } from '../interface/article/Article';
+import { HasSession } from '../session/has-session.decorator';
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ArticleEntity, articleWire } from '../database/entity/article';
-import { ArticlePipe } from './article.pipe';
 
 @Controller('articles')
+@HasSession()
 export class ArticleController {
   constructor(private readonly articleService: ArticleService) {}
 
