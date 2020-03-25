@@ -5,6 +5,10 @@ Fashionkilla is a modern content management system created for Habbo Retros.
 
 It is built to support the LTS version of Arcturus Morningstar.
 
+## Getting Started
+* [API Installation](api/README.md)
+* [Frontend Installation](web/README.md)
+
 ## The Team
 LeChris - Sole Maintainer
 <br/>

@@ -17,3 +17,8 @@ export const databaseName: string = getEnvOrFail('DATABASE_NAME');
 // Authentication
 export const jwtSecret: string = getEnvOrFail("JWT_SECRET");
 export const jwtExpires: number = Number(getEnvOrFail("JWT_EXPIRES"));
+
+// Defaults - User
+export const defaultUserLook: string = getEnvOrFail("DEFAULT_USER_LOOK");
+export const defaultUserCredits: number = Number(getEnvOrFail("DEFAULT_USER_CREDITS"));
+export const defaultUserPixels: number = Number(getEnvOrFail("DEFAULT_USER_PIXELS"));

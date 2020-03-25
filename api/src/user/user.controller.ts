@@ -4,6 +4,7 @@ import { User } from '../interface/user';
 import { UserService } from './user.service';
 import { UserEntity, userWire } from '../database/entity';
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { defaultUserCredits, defaultUserLook, defaultUserPixels } from '../config';
 
 @Controller('users')
 export class UserController {
@@ -11,7 +12,15 @@ export class UserController {
 
   @Post()
   async createUser(@Body() newUser: NewUserDTO): Promise<User> {
-    const user: UserEntity = await this.userService.create(newUser);
+    const user: UserEntity = await this.userService.create({
+      username: newUser.username,
+      password: newUser.password,
+      email: newUser.email,
+      look: defaultUserLook,
+      credits: defaultUserCredits,
+      pixels: defaultUserPixels,
+      online: 0,
+    });
     return userWire(user);
   }
 
