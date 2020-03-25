@@ -9,7 +9,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { Article } from '../../../interface/article/Article';
+import { Article } from 'fashionkilla-interfaces';
 
 export function articleWire(articleEntity: ArticleEntity): Article {
   return {

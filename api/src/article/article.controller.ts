@@ -1,7 +1,7 @@
 import { ArticlePipe } from './article.pipe';
 import { NewArticleDTO } from './article.dto';
+import { Article } from 'fashionkilla-interfaces';
 import { ArticleService } from './article.service';
-import { Article } from '../interface/article/Article';
 import { HasSession } from '../session/has-session.decorator';
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ArticleEntity, articleWire } from '../database/entity/article';

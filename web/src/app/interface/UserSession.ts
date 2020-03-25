@@ -1,4 +1,4 @@
-import { User } from './';
+import { User } from 'fashionkilla-interfaces';
 
 export interface UserSession {
   user?: User;

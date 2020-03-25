@@ -1,6 +1,6 @@
 import { jwtSecret } from '../config';
-import { User } from '../interface/user';
 import { Injectable } from '@nestjs/common';
+import { User } from 'fashionkilla-interfaces';
 import { UserService } from '../user/user.service';
 import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';

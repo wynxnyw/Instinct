@@ -1,7 +1,7 @@
 import { UserPipe } from './user.pipe';
 import { NewUserDTO } from './user.dto';
-import { User } from '../interface/user';
 import { UserService } from './user.service';
+import { User } from 'fashionkilla-interfaces';
 import { UserEntity, userWire } from '../database/entity';
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import {

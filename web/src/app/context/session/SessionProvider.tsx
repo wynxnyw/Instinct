@@ -1,6 +1,6 @@
-import { exampleUser, User } from 'app/interface';
 import React, { PureComponent } from 'react';
 import { sessionService } from 'app/service';
+import { exampleUser, User } from 'fashionkilla-interfaces';
 import { SessionContext, SessionInterface, SessionProviderProps } from './';
 
 export class SessionContextProvider extends PureComponent<SessionProviderProps> {

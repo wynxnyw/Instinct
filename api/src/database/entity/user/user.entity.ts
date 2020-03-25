@@ -1,5 +1,5 @@
 import { ArticleEntity } from '../';
-import { User } from '../../../interface/user';
+import { User } from 'fashionkilla-interfaces';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 export function userWire(userEntity: UserEntity): User {
