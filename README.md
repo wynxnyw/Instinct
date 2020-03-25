@@ -9,6 +9,8 @@ It is built to support the LTS version of Arcturus Morningstar.
 LeChris - Sole Maintainer
 <br/>
 Raizer - Base Designer
+<br/>
+A$AP Rocky - Inspiring the name [here](https://www.youtube.com/watch?v=F6VfsJ7LAlE)
 
 ## Tech Stack
 * NodeJS
