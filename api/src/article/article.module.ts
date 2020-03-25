@@ -6,10 +6,7 @@ import { DatabaseModule } from '../database/database.module';
 import { SessionModule } from '../session/session.module';
 
 @Module({
-  imports: [
-    SessionModule,
-    DatabaseModule
-  ],
+  imports: [SessionModule, DatabaseModule],
   controllers: [ArticleController],
   providers: [ArticlePipe, ArticleService],
   exports: [ArticlePipe, ArticleService],

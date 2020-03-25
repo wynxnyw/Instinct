@@ -4,7 +4,11 @@ import { User } from '../interface/user';
 import { UserService } from './user.service';
 import { UserEntity, userWire } from '../database/entity';
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import { defaultUserCredits, defaultUserLook, defaultUserPixels } from '../config';
+import {
+  defaultUserCredits,
+  defaultUserLook,
+  defaultUserPixels,
+} from '../config';
 
 @Controller('users')
 export class UserController {

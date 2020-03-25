@@ -8,6 +8,13 @@ import { ArticleModule } from './article/article.module';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [ArticleModule, CommonModule, UserModule, HealthModule, DatabaseModule, SessionModule],
+  imports: [
+    ArticleModule,
+    CommonModule,
+    UserModule,
+    HealthModule,
+    DatabaseModule,
+    SessionModule,
+  ],
 })
 export class AppModule {}

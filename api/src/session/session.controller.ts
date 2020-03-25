@@ -8,12 +8,14 @@ import { UserEntity, userWire } from '../database/entity/user';
 
 @Controller('session')
 export class SessionController {
-
-  constructor(private readonly sessionService: SessionService) { }
+  constructor(private readonly sessionService: SessionService) {}
 
   @Post()
   createSession(@Body() newSession: NewSessionDTO): Promise<string> {
-    return this.sessionService.loginWithCredentials(newSession.username, newSession.password);
+    return this.sessionService.loginWithCredentials(
+      newSession.username,
+      newSession.password,
+    );
   }
 
   @Get()
@@ -21,5 +23,4 @@ export class SessionController {
   getSession(@GetSession() session: UserEntity): User {
     return userWire(session);
   }
-
 }

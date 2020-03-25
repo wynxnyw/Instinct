@@ -3,7 +3,6 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class HashService {
-
   generate(raw: string): string {
     return Bcrypt.hashSync(raw);
   }
@@ -11,5 +10,4 @@ export class HashService {
   compare(raw: string, hashed: string): boolean {
     return Bcrypt.compareSync(raw, hashed);
   }
-
 }

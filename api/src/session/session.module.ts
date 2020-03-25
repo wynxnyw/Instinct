@@ -23,26 +23,14 @@ import { BearerTokenStrategy } from './bearer-token.strategy';
       },
     }),
   ],
-  controllers: [
-    SessionController,
-  ],
-  providers: [
-    SessionService,
-    BearerTokenService,
-    BearerTokenStrategy,
-  ],
-  exports: [
-    SessionService,
-    BearerTokenService,
-    BearerTokenStrategy,
-  ],
+  controllers: [SessionController],
+  providers: [SessionService, BearerTokenService, BearerTokenStrategy],
+  exports: [SessionService, BearerTokenService, BearerTokenStrategy],
 })
 export class SessionModule {
-
   constructor() {
     PassportModule.register({
       session: true,
     });
   }
-
 }

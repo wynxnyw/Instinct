@@ -36,7 +36,7 @@ export class UserEntity {
   pixels!: number;
 
   @Column({ type: 'integer' })
-  online!: 0|1;
+  online!: 0 | 1;
 
   @OneToMany(
     () => ArticleEntity,
