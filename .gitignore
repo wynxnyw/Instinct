@@ -6,8 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-.idea
-.idea/
+dist
+
 .env
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
@@ -90,3 +90,5 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+.idea/
