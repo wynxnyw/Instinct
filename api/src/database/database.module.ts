@@ -1,4 +1,4 @@
-import { UserEntity } from './';
+import { databaseEntities } from './';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import {
@@ -16,9 +16,10 @@ import {
       username: databaseUser,
       password: databasePass,
       database: databaseName,
-      entities: [UserEntity],
+      entities: databaseEntities,
+      synchronize: true,
     }),
-    TypeOrmModule.forFeature([UserEntity]),
+    TypeOrmModule.forFeature(databaseEntities),
   ],
   exports: [TypeOrmModule],
 })

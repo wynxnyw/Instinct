@@ -3,7 +3,7 @@ export interface User {
   username: string;
 }
 
-export const exampleUseR: User = {
+export const exampleUser: User = {
   id: 1,
   username: 'Test',
 };
