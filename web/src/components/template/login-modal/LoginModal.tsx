@@ -1,19 +1,41 @@
-import React from 'react';
-import { Form, Icon, ModalButton } from 'components';
+import React, { useContext, useState } from 'react';
+import { LoginModalState, defaultLoginModalState } from './';
+import { SessionContext, SessionInterface } from 'app/context';
+import { Form, Input, Icon, ModalButton, redirect } from 'components';
 
 export function LoginModal() {
+  const [state, setState] = useState<LoginModalState>(defaultLoginModalState);
+  const sessionContext = useContext<SessionInterface>(SessionContext);
+
+  function setValue<T extends keyof LoginModalState>(key: T, value: LoginModalState[T]): void {
+    setState({
+      ...state,
+      [key]: value,
+    });
+  }
+
+  async function tryLogin(): Promise<void> {
+    try {
+      setValue('showSpinner', true);
+      await sessionContext.login(state.username!, state.password!);
+      redirect('/home');
+    } catch {
+      setValue('showSpinner', false);
+    }
+  }
+
   return (
     <ModalButton button="Login" header="Login to your account">
-      <Form className="login-form">
+      <Form className="login-form" onSubmit={tryLogin}>
         <label className="username-input">
-          <input type="text" name="username" className="rounded-input" placeholder="Username" />
+          <Input name="username" placeholder="Username" value={state.username} onChange={setValue} type="text" />
           <Icon type="user" />
         </label>
         <label className="password-input">
-          <input type="password" name="username" className="rounded-input" placeholder="Password" />
+          <Input name="password" placeholder="Password" value={state.password} onChange={setValue} type="password" />
           <Icon type="user" />
         </label>
-        <button type="submit" className="rounded-button blue plain">
+        <button className="rounded-button blue plain" type="submit">
           Log In
         </button>
       </Form>

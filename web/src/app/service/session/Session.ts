@@ -1,6 +1,8 @@
 import { SessionInterface } from './';
+import { AxiosResponse } from 'axios';
+import { User } from 'fashionkilla-interfaces';
 import { localStorageService } from 'app/service';
-import { exampleUser, User } from 'fashionkilla-interfaces';
+import { backendAPI, setAPIToken } from 'app/BackendAPI';
 
 class SessionService implements SessionInterface {
   readonly localStorageKey = 'session';
@@ -15,20 +17,27 @@ class SessionService implements SessionInterface {
   }
 
   async attemptCredentials(username: string, password: string): Promise<string> {
-    if (username !== exampleUser.username || password !== 'password') {
-      throw new Error('Invalid credentials');
-    }
-
-    return '123';
+    const bearerToken: AxiosResponse<string> = await backendAPI.post('session', { username, password });
+    return bearerToken.data;
   }
 
-  async attemptBearerToken(authToken: string): Promise<User> {
-    if (authToken !== '123') {
-      throw new Error('Invalid token');
+  async attemptBearerToken(bearerToken: string): Promise<User> {
+    try {
+      this.setBearerToken(bearerToken);
+      const session: AxiosResponse<User> = await backendAPI.get('session');
+      return session.data;
+    } catch {
+      setAPIToken();
+      throw new Error('Invalid bearer token');
     }
+  }
 
-    localStorageService.set(this.localStorageKey, '123');
-    return exampleUser;
+  setBearerToken(bearerToken: string): void {
+    setAPIToken(bearerToken);
+
+    return bearerToken !== undefined
+      ? localStorageService.set(this.localStorageKey, bearerToken)
+      : localStorageService.delete(this.localStorageKey);
   }
 
   logout(): void {

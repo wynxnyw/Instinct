@@ -12,7 +12,7 @@
     "reactstrap": "^8.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "gts clean && gts check && tsc -p . && react-scripts test --coverage",
     "fix": "gts clean && gts fix"
@@ -50,5 +50,6 @@
     "gts": "^1.1.2",
     "node-sass": "^4.13.1",
     "typescript": "^3.8.3"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }
