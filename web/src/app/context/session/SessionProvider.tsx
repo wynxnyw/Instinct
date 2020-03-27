@@ -4,6 +4,7 @@ import { exampleUser, User } from 'fashionkilla-interfaces';
 import { SessionContext, SessionInterface, SessionProviderProps } from './';
 
 export class SessionContextProvider extends PureComponent<SessionProviderProps> {
+
   setStore = (changes: Partial<SessionInterface>): void => {
     return this.setState(changes);
   };
@@ -12,7 +13,7 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
     this.init();
   }
 
-  async init(): Promise<void> {
+   init = async (): Promise<void> => {
     const user: User | undefined = await sessionService.init();
 
     if (user) {
@@ -20,14 +21,14 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
     } else {
       this.logout();
     }
-  }
+  };
 
-  async login(username: string, password: string): Promise<User> {
+  login = async (username: string, password: string): Promise<User> => {
     const authToken: string = await sessionService.attemptCredentials(username, password);
     const user: User = await sessionService.attemptBearerToken(authToken);
     this.initSession(user);
     return user;
-  }
+  };
 
   logout = (): void => {
     sessionService.logout();
@@ -42,7 +43,7 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
       user,
       startedAt: new Date(),
     });
-  }
+  };
 
   state: SessionInterface = {
     startedAt: undefined,
@@ -50,6 +51,7 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
     setStore: this.setStore,
     login: this.login,
     logout: this.logout,
+    forceStart: this.initSession,
   };
 
   render() {

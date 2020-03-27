@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import React, { useContext, useState } from 'react';
 import { LoginModalState, defaultLoginModalState } from './';
 import { SessionContext, SessionInterface } from 'app/context';
@@ -18,14 +19,15 @@ export function LoginModal() {
     try {
       setValue('showSpinner', true);
       await sessionContext.login(state.username!, state.password!);
-      redirect('/home');
+      redirect('home');
     } catch {
+      toast.error('There was a problem with your username or password.');
       setValue('showSpinner', false);
     }
   }
 
   return (
-    <ModalButton button="Login" header="Login to your account">
+    <ModalButton button="Login" className="text-white" header="Login to your account" style={{ background: 'transparent' }}>
       <Loading isLoading={state.showSpinner} text="Attempting to login...">
         <Form className="login-form" onSubmit={tryLogin}>
           <label className="username-input">
@@ -34,7 +36,7 @@ export function LoginModal() {
           </label>
           <label className="password-input">
             <Input name="password" placeholder="Password" value={state.password} onChange={setValue} type="password" />
-            <Icon type="user" />
+            <Icon type="lock" />
           </label>
           <button className="rounded-button blue plain" type="submit">
             Log In

@@ -5,4 +5,5 @@ export interface ButtonProps {
   onClick?: () => void;
   color?: BackgroundColor;
   children: Children;
+  style?: object;
 }

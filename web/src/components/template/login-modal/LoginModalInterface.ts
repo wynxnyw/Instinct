@@ -1,11 +1,11 @@
 export interface LoginModalState {
-  username?: string;
-  password?: string;
+  username: string;
+  password: string;
   showSpinner: boolean;
 }
 
 export const defaultLoginModalState: LoginModalState = {
-  username: undefined,
-  password: undefined,
+  username: '',
+  password: '',
   showSpinner: false,
 };

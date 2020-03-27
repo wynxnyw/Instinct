@@ -31,4 +31,13 @@ export class UserService {
       },
     });
   }
+
+  getByEmail(email: string): Promise<UserEntity> {
+    return this.userRepository.findOneOrFail({
+      where: {
+        email,
+      },
+    });
+  }
+
 }

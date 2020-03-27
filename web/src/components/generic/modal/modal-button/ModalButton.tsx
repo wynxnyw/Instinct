@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, ModalOverlay } from 'components';
 import { ModalButtonProps, ModalButtonState, defaultModalButtonState } from './';
 
-export function ModalButton({ button, children, header }: ModalButtonProps) {
+export function ModalButton({ button, children, className = '',  header, style }: ModalButtonProps) {
   const [state, setState] = useState<ModalButtonState>(defaultModalButtonState);
 
   function onToggle(): void {
@@ -13,7 +13,7 @@ export function ModalButton({ button, children, header }: ModalButtonProps) {
 
   return (
     <>
-      <Button className="rounded-button white plain" onClick={onToggle}>
+      <Button className={`rounded-button white plain ${className}`} onClick={onToggle} style={style}>
         {button}
       </Button>
       <ModalOverlay header={header} isOpen={state.showModal} onToggle={onToggle}>
