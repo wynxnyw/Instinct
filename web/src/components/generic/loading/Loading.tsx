@@ -8,5 +8,5 @@ export function Loading({ children, isLoading, text = 'Loading...' }: LoadingPro
     <LoadingOverlay active={isLoading} spinner text={text}>
       {children}
     </LoadingOverlay>
-  )
+  );
 }

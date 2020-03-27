@@ -1,12 +1,11 @@
-import { UniqueEmailConstraint } from './unique-email.constraint';
-
-export * from './unique-email.constraint';
-export * from './user-exists.constraint';
-export * from './unique-username.constraint';
-import { ValidatorConstraint, ValidatorConstraintInterface } from 'class-validator';
 import { Class } from 'fashionkilla-interfaces';
-
+import { UserExistsConstraint } from './user-exists';
+import { UniqueEmailConstraint } from './unique-email';
+import { UniqueUsernameConstraint } from './unique-username';
+import { ValidatorConstraintInterface } from 'class-validator';
 
 export const userConstraints: Array<Class<ValidatorConstraintInterface>> = [
   UniqueEmailConstraint,
-]
+  UniqueUsernameConstraint,
+  UserExistsConstraint,
+];

@@ -12,7 +12,7 @@ export function App() {
         <Router />
       </span>
       <Footer />
-      <ToastContainer/>
+      <ToastContainer />
     </ContextProviders>
   );
 }

@@ -20,7 +20,7 @@ export function NavBar() {
         <NavBarLink to="/groups">My Groups</NavBarLink>
         <NavBarLink to="/help">Help Tool</NavBarLink>
         <li className="navigation-item navigation-right-side-item has-items">
-          <UserDropdown/>
+          <UserDropdown />
         </li>
       </ul>
     </nav>

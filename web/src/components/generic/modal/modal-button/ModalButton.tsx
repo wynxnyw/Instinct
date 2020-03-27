@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, ModalOverlay } from 'components';
 import { ModalButtonProps, ModalButtonState, defaultModalButtonState } from './';
 
-export function ModalButton({ button, children, className = '',  header, style }: ModalButtonProps) {
+export function ModalButton({ button, children, className = '', header, style }: ModalButtonProps) {
   const [state, setState] = useState<ModalButtonState>(defaultModalButtonState);
 
   function onToggle(): void {

@@ -20,7 +20,7 @@ export class UserController {
       username: newUser.username,
       password: newUser.password,
       email: newUser.email,
-      look: defaultUserLook,
+      figure: defaultUserLook,
       credits: defaultUserCredits,
       pixels: defaultUserPixels,
       online: 0,

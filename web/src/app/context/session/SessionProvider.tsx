@@ -4,7 +4,6 @@ import { exampleUser, User } from 'fashionkilla-interfaces';
 import { SessionContext, SessionInterface, SessionProviderProps } from './';
 
 export class SessionContextProvider extends PureComponent<SessionProviderProps> {
-
   setStore = (changes: Partial<SessionInterface>): void => {
     return this.setState(changes);
   };
@@ -13,7 +12,7 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
     this.init();
   }
 
-   init = async (): Promise<void> => {
+  init = async (): Promise<void> => {
     const user: User | undefined = await sessionService.init();
 
     if (user) {
