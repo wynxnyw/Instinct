@@ -9,6 +9,7 @@ export function userWire(userEntity: UserEntity): User {
     credits: userEntity.credits,
     pixels: userEntity.pixels,
     online: userEntity.online === 1,
+    figure: userEntity.figure,
   };
 }
 
@@ -26,8 +27,8 @@ export class UserEntity {
   @Column()
   password!: string;
 
-  @Column()
-  look!: string;
+  @Column({ name: 'look' })
+  figure!: string;
 
   @Column({ type: 'integer' })
   credits!: number;

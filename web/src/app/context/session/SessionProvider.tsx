@@ -29,15 +29,15 @@ export class SessionContextProvider extends PureComponent<SessionProviderProps> 
     return user;
   }
 
-  logout(): void {
+  logout = (): void => {
     sessionService.logout();
     this.setState({
       user: undefined,
       startedAt: undefined,
     });
-  }
+  };
 
-  initSession(user: User): void {
+  initSession = (user: User): void => {
     this.setState({
       user,
       startedAt: new Date(),
