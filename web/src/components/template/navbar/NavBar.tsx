@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.scss';
-import { NavBarChildLink, NavBarDropdown, NavBarLink, NavBarLabel } from 'components';
+import { NavBarChildLink, NavBarDropdown, NavBarLink, NavBarLabel, UserDropdown } from 'components';
 
 export function NavBar() {
   return (
@@ -19,6 +19,9 @@ export function NavBar() {
         <NavBarLink to="/games">High Scores</NavBarLink>
         <NavBarLink to="/groups">My Groups</NavBarLink>
         <NavBarLink to="/help">Help Tool</NavBarLink>
+        <li className="navigation-item navigation-right-side-item has-items">
+          <UserDropdown/>
+        </li>
       </ul>
     </nav>
   );
